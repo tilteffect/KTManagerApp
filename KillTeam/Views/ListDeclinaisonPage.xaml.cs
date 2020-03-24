@@ -41,7 +41,7 @@ namespace KillTeam.Views
                 .First();
 
             GroupedFigurines = new List<GroupFigurineViewModel>();
-            GroupFigurineViewModel commandantGroup = new GroupFigurineViewModel() { GroupName = Resx.Translate.Commandant };
+            GroupFigurineViewModel commandantGroup = new GroupFigurineViewModel() { GroupName = Properties.Resources.Commandant };
             foreach (var figurine in equipe.Faction.Models)
             {
 
@@ -92,7 +92,7 @@ namespace KillTeam.Views
 
             await Member.CreateFrom(EquipeId, declinaisonModel.Id);
 
-            await Application.Current.MainPage.Navigation.PopAsync();
+            await KTApp.Navigation.PopModalAsync(true);
         }
     }
 }

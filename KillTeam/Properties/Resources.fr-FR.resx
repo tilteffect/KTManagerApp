@@ -117,11 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
   <data name="AddEquipeButton" xml:space="preserve">
     <value>Nouvelle Equipe</value>
   </data>
   <data name="AddMembreButton" xml:space="preserve">
     <value>Ajout Membre</value>
+  </data>
+  <data name="AlerteCopier" xml:space="preserve">
+    <value>Equipe copiée dans le presse papier</value>
+  </data>
+  <data name="Aptitudes" xml:space="preserve">
+    <value>Aptitudes</value>
+  </data>
+  <data name="AptitudesCommunes" xml:space="preserve">
+    <value>Aptitudes communes à la faction</value>
+  </data>
+  <data name="Arme" xml:space="preserve">
+    <value>Arme</value>
   </data>
   <data name="ArmeConfigTitle" xml:space="preserve">
     <value>Un Seul Choix Possible</value>
@@ -135,68 +150,8 @@
   <data name="AucuneSpe" xml:space="preserve">
     <value>Aucune spécialité</value>
   </data>
-  <data name="ChangeArme" xml:space="preserve">
-    <value>Changer Armes</value>
-  </data>
-  <data name="ChangeSpe" xml:space="preserve">
-    <value>Changer Spécialité</value>
-  </data>
-  <data name="DetailsAptitudes" xml:space="preserve">
-    <value>Détails des aptitudes</value>
-  </data>
-  <data name="ListAptitudeButton" xml:space="preserve">
-    <value>Liste Aptitudes</value>
-  </data>
-  <data name="RegroupeMembres" xml:space="preserve">
-    <value>Regrouper les membres identiques</value>
-  </data>
-  <data name="PlusDeCentPoints" xml:space="preserve">
-    <value>Votre équipe vaut plus de 100 points</value>
-  </data>
-  <data name="PasDeLeader" xml:space="preserve">
-    <value>Votre équipe n'a pas de leader</value>
-  </data>
-  <data name="PlusDeQuatreSpe" xml:space="preserve">
-    <value>Votre équipe a plus de 4 spécialistes</value>
-  </data>
-  <data name="MemeSpe" xml:space="preserve">
-    <value>Vous avez plusieurs fois le même spécialiste</value>
-  </data>
-  <data name="AlerteCopier" xml:space="preserve">
-    <value>Equipe copiée dans le presse papier</value>
-  </data>
-  <data name="Copier" xml:space="preserve">
-    <value>Copie</value>
-  </data>
-  <data name="Erreurs" xml:space="preserve">
-    <value>Erreurs</value>
-  </data>
-  <data name="Tactiques" xml:space="preserve">
-    <value>Tactiques</value>
-  </data>
-  <data name="Partager" xml:space="preserve">
-    <value>Partager</value>
-  </data>
-  <data name="AptitudesCommunes" xml:space="preserve">
-    <value>Aptitudes communes à la faction</value>
-  </data>
-  <data name="ChoixImpression" xml:space="preserve">
-    <value>Paramètres d'impression</value>
-  </data>
-  <data name="GeneratePDF" xml:space="preserve">
-    <value>Générer le PDF</value>
-  </data>
-  <data name="Points" xml:space="preserve">
-    <value>Point(s)</value>
-  </data>
-  <data name="A" xml:space="preserve">
-    <value>A</value>
-  </data>
-  <data name="Aptitudes" xml:space="preserve">
-    <value>Aptitudes</value>
-  </data>
-  <data name="Arme" xml:space="preserve">
-    <value>Arme</value>
+  <data name="Blessures" xml:space="preserve">
+    <value>Blessures Legeres</value>
   </data>
   <data name="CC" xml:space="preserve">
     <value>CC</value>
@@ -204,206 +159,98 @@
   <data name="Cd" xml:space="preserve">
     <value>Cd</value>
   </data>
+  <data name="ChangeArme" xml:space="preserve">
+    <value>Changer Armes</value>
+  </data>
+  <data name="ChangeNiveau" xml:space="preserve">
+    <value>Changer Niveau/Spécialité</value>
+  </data>
+  <data name="ChangeSpe" xml:space="preserve">
+    <value>Changer Spécialité</value>
+  </data>
+  <data name="ChangeTrait" xml:space="preserve">
+    <value>Changer Trait</value>
+  </data>
+  <data name="ChoisirPsy" xml:space="preserve">
+    <value>Choix psyker</value>
+  </data>
+  <data name="ChoixImpression" xml:space="preserve">
+    <value>Paramètres d'impression</value>
+  </data>
+  <data name="Commandant" xml:space="preserve">
+    <value>Commandant</value>
+  </data>
+  <data name="Connection" xml:space="preserve">
+    <value>Connexion Google</value>
+  </data>
+  <data name="Convalescence" xml:space="preserve">
+    <value>Convalescence</value>
+  </data>
+  <data name="Copier" xml:space="preserve">
+    <value>Copie</value>
+  </data>
   <data name="CT" xml:space="preserve">
     <value>CT</value>
   </data>
   <data name="D" xml:space="preserve">
     <value>D</value>
   </data>
-  <data name="E" xml:space="preserve">
-    <value>E</value>
-  </data>
-  <data name="F" xml:space="preserve">
-    <value>F</value>
-  </data>
-  <data name="M" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="PA" xml:space="preserve">
-    <value>PA</value>
-  </data>
-  <data name="Portee" xml:space="preserve">
-    <value>Portée</value>
-  </data>
-  <data name="PV" xml:space="preserve">
-    <value>PV</value>
-  </data>
-  <data name="Sv" xml:space="preserve">
-    <value>Sv</value>
-  </data>
-  <data name="Type" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="Supprimer" xml:space="preserve">
-    <value>Supprimer</value>
-  </data>
-  <data name="Blessures" xml:space="preserve">
-    <value>Blessures Legeres</value>
-  </data>
-  <data name="Convalescence" xml:space="preserve">
-    <value>Convalescence</value>
-  </data>
-  <data name="Experience" xml:space="preserve">
-    <value>Experience</value>
-  </data>
-  <data name="Niveau" xml:space="preserve">
-    <value>Niveau</value>
-  </data>
-  <data name="Recrue" xml:space="preserve">
-    <value>Recrue</value>
-  </data>
-  <data name="Roster" xml:space="preserve">
-    <value>Feuille d'ordre</value>
-  </data>
-  <data name="Selection" xml:space="preserve">
-    <value>Sélection</value>
-  </data>
-  <data name="ChangeNiveau" xml:space="preserve">
-    <value>Changer Niveau/Spécialité</value>
-  </data>
-  <data name="TropDeclinaison" xml:space="preserve">
-    <value>Il y a trop de {0}. ({1} maximum)</value>
-  </data>
-  <data name="TropRemplacement" xml:space="preserve">
-    <value>Il y a trop d'option {0}. ({1} maximum)</value>
-  </data>
-  <data name="Et" xml:space="preserve">
-    <value>et</value>
-  </data>
-  <data name="Or" xml:space="preserve">
-    <value>ou</value>
-  </data>
-  <data name="RemplacePar" xml:space="preserve">
-    <value>remplacé par</value>
-  </data>
-  <data name="TitleSpe" xml:space="preserve">
-    <value>Sélectionnez une spécialité</value>
-  </data>
-  <data name="XPRecrueConvalescence" xml:space="preserve">
-    <value>XP / Recrue / Convalescence</value>
-  </data>
-  <data name="InGame" xml:space="preserve">
-    <value>En jeu</value>
-  </data>
-  <data name="PDF" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="RegrouperAptitudes" xml:space="preserve">
-    <value>Regrouper aptitudes</value>
-  </data>
-  <data name="PlusDeVingt" xml:space="preserve">
-    <value>Votre équipe a plus de 20 membres</value>
-  </data>
-  <data name="Faction" xml:space="preserve">
-    <value>Faction</value>
-  </data>
-  <data name="General" xml:space="preserve">
-    <value>Général</value>
-  </data>
-  <data name="Specialite" xml:space="preserve">
-    <value>Spécialité</value>
-  </data>
-  <data name="Connection" xml:space="preserve">
-    <value>Connexion Google</value>
-  </data>
   <data name="Deconnection" xml:space="preserve">
     <value>Deconnexion Google</value>
   </data>
-  <data name="PdfOfficiel" xml:space="preserve">
-    <value>Pdf officiel</value>
-  </data>
-  <data name="Synchro" xml:space="preserve">
-    <value>Synchronisation</value>
-  </data>
-  <data name="EtesVousSur" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir supprimer</value>
-  </data>
-  <data name="Non" xml:space="preserve">
-    <value>Non</value>
-  </data>
-  <data name="Oui" xml:space="preserve">
-    <value>Oui</value>
-  </data>
-  <data name="ChangeTrait" xml:space="preserve">
-    <value>Changer Trait</value>
-  </data>
-  <data name="Commandant" xml:space="preserve">
-    <value>Commandant</value>
-  </data>
-  <data name="UnSeulCommandant" xml:space="preserve">
-    <value>Vous ne pouvez avoir qu'un seul commandant</value>
-  </data>
-  <data name="ChoisirPsy" xml:space="preserve">
-    <value>Choix psyker</value>
-  </data>
-  <data name="PsyAuChoix" xml:space="preserve">
-    <value>{0} pouvoir(s) psy +1 commun au choix:</value>
+  <data name="DetailsAptitudes" xml:space="preserve">
+    <value>Détails des aptitudes</value>
   </data>
   <data name="Discipline" xml:space="preserve">
     <value>Discipline</value>
   </data>
-  <data name="Psyker" xml:space="preserve">
-    <value>Psyker</value>
-  </data>
-  <data name="PsykerDesc" xml:space="preserve">
-    <value>Cette figurine peut tenter de manifester {0} pouvoir(s) psychique(s) et d'abjurer {1} pouvoir(s) psychique(s) à chaque phase psychique.</value>
-  </data>
-  <data name="OptionTactiquesDeclinaison" xml:space="preserve">
-    <value>Tactiques de figurine</value>
-  </data>
-  <data name="OptionTactiquesFaction" xml:space="preserve">
-    <value>Tactiques de faction</value>
-  </data>
-  <data name="OptionTactiquesGeneral" xml:space="preserve">
-    <value>Tactiques générales</value>
-  </data>
-  <data name="OptionTactiquesSpecialite" xml:space="preserve">
-    <value>Tactiques de spécialité</value>
+  <data name="DroitFichier" xml:space="preserve">
+    <value>Le fichier n'a pas pu être créé. Avez vous accepter les autorisations?</value>
   </data>
   <data name="Dupliquer" xml:space="preserve">
     <value>Dupliquer</value>
   </data>
-  <data name="Ouvrir" xml:space="preserve">
-    <value>Ouvrir</value>
-  </data>
-  <data name="DroitFichier" xml:space="preserve">
-    <value>Le fichier n'a pas pu être créé. Avez vous accepter les autorisations?</value>
-  </data>
-  <data name="PouvoirGeneralisteTitle" xml:space="preserve">
-    <value>Trait Généraliste</value>
-  </data>
-  <data name="PouvoirMaitreSpeTitle" xml:space="preserve">
-    <value>Trait Maitre spécialiste</value>
-  </data>
-  <data name="German" xml:space="preserve">
-    <value>Allemand</value>
+  <data name="E" xml:space="preserve">
+    <value>E</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>Anglais</value>
   </data>
-  <data name="French" xml:space="preserve">
-    <value>Français</value>
+  <data name="Erreurs" xml:space="preserve">
+    <value>Erreurs</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>Langage</value>
+  <data name="Et" xml:space="preserve">
+    <value>et</value>
   </data>
-  <data name="Membres" xml:space="preserve">
-    <value>membres</value>
+  <data name="EtesVousSur" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer</value>
   </data>
-  <data name="Remerciement" xml:space="preserve">
-    <value>Remerciements</value>
+  <data name="Experience" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="F" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="Faction" xml:space="preserve">
+    <value>Faction</value>
   </data>
   <data name="Filtres" xml:space="preserve">
     <value>Filtres</value>
   </data>
-  <data name="Phases" xml:space="preserve">
-    <value>Phases</value>
+  <data name="French" xml:space="preserve">
+    <value>Français</value>
   </data>
-  <data name="PartageDepuis" xml:space="preserve">
-    <value>Partagé depuis Kill Team Manager.</value>
+  <data name="General" xml:space="preserve">
+    <value>Général</value>
   </data>
-  <data name="Membre" xml:space="preserve">
-    <value>membre</value>
+  <data name="GeneratePDF" xml:space="preserve">
+    <value>Générer le PDF</value>
+  </data>
+  <data name="German" xml:space="preserve">
+    <value>Allemand</value>
+  </data>
+  <data name="InGame" xml:space="preserve">
+    <value>En jeu</value>
   </data>
   <data name="KickStarterContinue" xml:space="preserve">
     <value>Continuer</value>
@@ -421,7 +268,160 @@ Aimez-vous Kill Team Manager? Aidez-nous à créer MyMiniReport.</value>
   <data name="KickStarterTitle" xml:space="preserve">
     <value>Notre nouvelle application sur KickStarter !</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langage</value>
+  </data>
+  <data name="ListAptitudeButton" xml:space="preserve">
+    <value>Liste Aptitudes</value>
+  </data>
+  <data name="M" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="Membre" xml:space="preserve">
+    <value>membre</value>
+  </data>
+  <data name="Membres" xml:space="preserve">
+    <value>membres</value>
+  </data>
+  <data name="MemeSpe" xml:space="preserve">
+    <value>Vous avez plusieurs fois le même spécialiste</value>
+  </data>
+  <data name="Niveau" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
   <data name="Nom" xml:space="preserve">
     <value>Nom</value>
+  </data>
+  <data name="Non" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="OptionTactiquesDeclinaison" xml:space="preserve">
+    <value>Tactiques de figurine</value>
+  </data>
+  <data name="OptionTactiquesFaction" xml:space="preserve">
+    <value>Tactiques de faction</value>
+  </data>
+  <data name="OptionTactiquesGeneral" xml:space="preserve">
+    <value>Tactiques générales</value>
+  </data>
+  <data name="OptionTactiquesSpecialite" xml:space="preserve">
+    <value>Tactiques de spécialité</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>ou</value>
+  </data>
+  <data name="Oui" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="Ouvrir" xml:space="preserve">
+    <value>Ouvrir</value>
+  </data>
+  <data name="PA" xml:space="preserve">
+    <value>PA</value>
+  </data>
+  <data name="PartageDepuis" xml:space="preserve">
+    <value>Partagé depuis Kill Team Manager.</value>
+  </data>
+  <data name="Partager" xml:space="preserve">
+    <value>Partager</value>
+  </data>
+  <data name="PasDeLeader" xml:space="preserve">
+    <value>Votre équipe n'a pas de leader</value>
+  </data>
+  <data name="PDF" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="PdfOfficiel" xml:space="preserve">
+    <value>Pdf officiel</value>
+  </data>
+  <data name="Phases" xml:space="preserve">
+    <value>Phases</value>
+  </data>
+  <data name="PlusDeCentPoints" xml:space="preserve">
+    <value>Votre équipe vaut plus de 100 points</value>
+  </data>
+  <data name="PlusDeQuatreSpe" xml:space="preserve">
+    <value>Votre équipe a plus de 4 spécialistes</value>
+  </data>
+  <data name="PlusDeVingt" xml:space="preserve">
+    <value>Votre équipe a plus de 20 membres</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Point(s)</value>
+  </data>
+  <data name="Portee" xml:space="preserve">
+    <value>Portée</value>
+  </data>
+  <data name="PouvoirGeneralisteTitle" xml:space="preserve">
+    <value>Trait Généraliste</value>
+  </data>
+  <data name="PouvoirMaitreSpeTitle" xml:space="preserve">
+    <value>Trait Maitre spécialiste</value>
+  </data>
+  <data name="PsyAuChoix" xml:space="preserve">
+    <value>{0} pouvoir(s) psy +1 commun au choix:</value>
+  </data>
+  <data name="Psyker" xml:space="preserve">
+    <value>Psyker</value>
+  </data>
+  <data name="PsykerDesc" xml:space="preserve">
+    <value>Cette figurine peut tenter de manifester {0} pouvoir(s) psychique(s) et d'abjurer {1} pouvoir(s) psychique(s) à chaque phase psychique.</value>
+  </data>
+  <data name="PV" xml:space="preserve">
+    <value>PV</value>
+  </data>
+  <data name="Recrue" xml:space="preserve">
+    <value>Recrue</value>
+  </data>
+  <data name="RegroupeMembres" xml:space="preserve">
+    <value>Regrouper les membres identiques</value>
+  </data>
+  <data name="RegrouperAptitudes" xml:space="preserve">
+    <value>Regrouper aptitudes</value>
+  </data>
+  <data name="Remerciement" xml:space="preserve">
+    <value>Remerciements</value>
+  </data>
+  <data name="RemplacePar" xml:space="preserve">
+    <value>remplacé par</value>
+  </data>
+  <data name="Roster" xml:space="preserve">
+    <value>Feuille d'ordre</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Sélection</value>
+  </data>
+  <data name="Specialite" xml:space="preserve">
+    <value>Spécialité</value>
+  </data>
+  <data name="Supprimer" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Sv" xml:space="preserve">
+    <value>Sv</value>
+  </data>
+  <data name="Synchro" xml:space="preserve">
+    <value>Synchronisation</value>
+  </data>
+  <data name="Tactiques" xml:space="preserve">
+    <value>Tactiques</value>
+  </data>
+  <data name="TitleSpe" xml:space="preserve">
+    <value>Sélectionnez une spécialité</value>
+  </data>
+  <data name="TropDeclinaison" xml:space="preserve">
+    <value>Il y a trop de {0}. ({1} maximum)</value>
+  </data>
+  <data name="TropRemplacement" xml:space="preserve">
+    <value>Il y a trop d'option {0}. ({1} maximum)</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UnSeulCommandant" xml:space="preserve">
+    <value>Vous ne pouvez avoir qu'un seul commandant</value>
+  </data>
+  <data name="XPRecrueConvalescence" xml:space="preserve">
+    <value>XP / Recrue / Convalescence</value>
   </data>
 </root>

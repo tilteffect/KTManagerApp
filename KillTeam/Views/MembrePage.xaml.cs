@@ -1,13 +1,16 @@
 ﻿using KillTeam.Models;
-using KillTeam.Resx;
+
 using KillTeam.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using KillTeam.Commands;
+using KillTeam.Commands.Handlers;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
+using Application = Xamarin.Forms.Application;
 using Entry = Xamarin.Forms.Entry;
 
 namespace KillTeam.Views
@@ -28,7 +31,9 @@ namespace KillTeam.Views
         {
             int fontSize = 15;
             int line = 0;
-            var backgroundColor = Color.LightGray;
+            var evenStyle = Application.Current.Resources["GridRowEven"] as Style;
+            var oddStyle = Application.Current.Resources["GridRowOdd"] as Style;
+            var labelStyle = evenStyle;
             bool isGerman = TranslateExtension.Ci.TwoLetterISOLanguageName == "de";
 
             ArmeGrid.RowDefinitions.Clear();
@@ -42,14 +47,14 @@ namespace KillTeam.Views
             ArmeGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.5, GridUnitType.Star) });
             ArmeGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.5, GridUnitType.Star) });
             ArmeGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.5, GridUnitType.Star) });
-            ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = Translate.Arme }, 0, line);
-            ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = Translate.Portee }, 1, line);
-            ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = Translate.Type }, 2, line);
-            ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = Translate.F }, 3, line);
-            ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = Translate.PA }, 4, line);
-            ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = Translate.D }, 5, line);
+            ArmeGrid.Children.Add(new Label {Style= labelStyle, FontSize = fontSize, Text = Properties.Resources.Arme }, 0, line);
+            ArmeGrid.Children.Add(new Label {Style= labelStyle, FontSize = fontSize, Text = Properties.Resources.Portee }, 1, line);
+            ArmeGrid.Children.Add(new Label {Style= labelStyle, FontSize = fontSize, Text = Properties.Resources.Type }, 2, line);
+            ArmeGrid.Children.Add(new Label {Style= labelStyle, FontSize = fontSize, Text = Properties.Resources.F }, 3, line);
+            ArmeGrid.Children.Add(new Label {Style= labelStyle, FontSize = fontSize, Text = Properties.Resources.PA }, 4, line);
+            ArmeGrid.Children.Add(new Label {Style= labelStyle, FontSize = fontSize, Text = Properties.Resources.D }, 5, line);
             line++;
-            backgroundColor = ArmeGrid.BackgroundColor;
+            labelStyle = oddStyle;
 
             List<MemberWeapon> armements = membre.MemberWeapons.ToList();
             armements.Sort();
@@ -59,8 +64,8 @@ namespace KillTeam.Views
                 if (arme.WeaponProfiles.Count > 1)
                 {
                     ArmeGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = arme.Name }, 0, line);
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = arme.Description }, 1, 6, line, line + 1);
+                    ArmeGrid.Children.Add(new Label { Style= labelStyle, FontSize = fontSize, Text = arme.Name }, 0, line);
+                    ArmeGrid.Children.Add(new Label { Style = labelStyle, FontSize = fontSize, Text = arme.Description }, 1, 6, line, line + 1);
                     line++;
                     prefix = " - ";
                 }
@@ -68,34 +73,28 @@ namespace KillTeam.Views
                 foreach (var pArme in arme.WeaponProfiles)
                 {
                     ArmeGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = prefix + pArme.Name }, 0, line);
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = pArme.Range.ToString() }, 1, line);
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = pArme.Type }, 2, line);
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = isGerman && pArme.Strength == "U" ? "T" : pArme.Strength }, 3, line);
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = pArme.ArmourPenetration }, 4, line);
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = pArme.Damages }, 5, line);
+                    ArmeGrid.Children.Add(new Label { Style= labelStyle, FontSize = fontSize, Text = prefix + pArme.Name }, 0, line);
+                    ArmeGrid.Children.Add(new Label { Style= labelStyle, FontSize = fontSize, Text = pArme.Range.ToString() }, 1, line);
+                    ArmeGrid.Children.Add(new Label { Style= labelStyle, FontSize = fontSize, Text = pArme.Type }, 2, line);
+                    ArmeGrid.Children.Add(new Label { Style= labelStyle, FontSize = fontSize, Text = isGerman && pArme.Strength == "U" ? "T" : pArme.Strength }, 3, line);
+                    ArmeGrid.Children.Add(new Label { Style= labelStyle, FontSize = fontSize, Text = pArme.ArmourPenetration }, 4, line);
+                    ArmeGrid.Children.Add(new Label { Style = labelStyle, FontSize = fontSize, Text = pArme.Damages }, 5, line);
                     line++;
                     ArmeGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-                    ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = pArme.Description }, 0, 6, line, line + 1);
+                    ArmeGrid.Children.Add(new Label { Style = labelStyle, FontSize = fontSize, Text = pArme.Description }, 0, 6, line, line + 1);
                     line++;
                 }
 
-                if (backgroundColor == Color.LightGray)
-                    backgroundColor = ArmeGrid.BackgroundColor;
-                else
-                    backgroundColor = Color.LightGray;
+                labelStyle = labelStyle == evenStyle ? oddStyle : evenStyle;
             }
 
             foreach (var arme in armements.Select(a => a.Weapon).Where(a => a.IsEquipement()))
             {
                 ArmeGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-                ArmeGrid.Children.Add(new Label { BackgroundColor = backgroundColor, FontSize = fontSize, Text = arme.Name }, 0, 6, line, line + 1);
+                ArmeGrid.Children.Add(new Label { Style = labelStyle, FontSize = fontSize, Text = arme.Name }, 0, 6, line, line + 1);
                 line++;
 
-                if (backgroundColor == Color.LightGray)
-                    backgroundColor = ArmeGrid.BackgroundColor;
-                else
-                    backgroundColor = Color.LightGray;
+                labelStyle = labelStyle == evenStyle ? oddStyle : evenStyle;
             }
         }
 
@@ -188,7 +187,7 @@ namespace KillTeam.Views
         async void ButtonSupprimerClicked(object sender, EventArgs e)
         {
             string NomMembre = KTContext.Db.Members.Where(m => m.Id == membreId).Select(m => m.Name).First();
-            bool reponse = await DisplayAlert(Translate.Supprimer, Translate.EtesVousSur + " \"" + NomMembre + "\" ?", Translate.Oui, Translate.Non);
+            bool reponse = await DisplayAlert(Properties.Resources.Supprimer, Properties.Resources.EtesVousSur + " \"" + NomMembre + "\" ?", Properties.Resources.Oui, Properties.Resources.Non);
             if (reponse)
             {
                 DeleteMembre();
@@ -198,34 +197,9 @@ namespace KillTeam.Views
 
         private void DeleteMembre()
         {
-            foreach (MemberPsychic MembrePsychique in KTContext.Db.MemberPsychics.Where(m => m.MemberId == membreId).AsNoTracking().ToList())
-            {
-                KTContext.Db.Entry(MembrePsychique).State = EntityState.Deleted;
-            }
-            foreach (MemberTrait ma in KTContext.Db.MemberTraits.Where(m => m.MemberId == membreId).AsNoTracking().ToList())
-            {
-                MemberTrait mad = KTContext.Db.MemberTraits.Find(ma.Id);
-                KTContext.Db.Entry(mad).State = EntityState.Deleted;
-            }
-            foreach (MemberPower ma in KTContext.Db.MemberPowers.Where(m => m.MembrerId == membreId).AsNoTracking().ToList())
-            {
-                MemberPower mad = KTContext.Db.MemberPowers.Find(ma.Id);
-                KTContext.Db.Entry(mad).State = EntityState.Deleted;
-            }
-            foreach (MemberWeapon ma in KTContext.Db.MemberWeapons.Where(m => m.MemberId == membreId).AsNoTracking().ToList())
-            {
-                MemberWeapon mad = KTContext.Db.MemberWeapons.Find(ma.Id);
-                KTContext.Db.Entry(mad).State = EntityState.Deleted;
-            }
-            foreach (MemberWarGearOption ma in KTContext.Db.MemberWarGearOptions.Where(m => m.MemberId == membreId).AsNoTracking().ToList())
-            {
-                MemberWarGearOption mad = KTContext.Db.MemberWarGearOptions.Find(ma.Id);
-                KTContext.Db.Entry(mad).State = EntityState.Deleted;
-            }
+            var deleteMemberCommandHandler = new DeleteMemberCommandHandler();
+            deleteMemberCommandHandler.Handle(new DeleteMemberCommand(membreId));
 
-            var membre = KTContext.Db.Members.Find(membreId);
-            KTContext.Db.Entry(membre).State = EntityState.Deleted;
-            KTContext.Db.SaveChanges();
         }
 
         async void ButtonChangeTraitClicked(object sender, EventArgs e)

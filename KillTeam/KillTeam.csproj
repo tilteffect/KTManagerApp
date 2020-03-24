@@ -13,12 +13,19 @@
 
   <ItemGroup>
     <Compile Remove="DataFiles\**" />
+    <Compile Remove="Resx\**" />
     <EmbeddedResource Remove="DataFiles\**" />
+    <EmbeddedResource Remove="Resx\**" />
     <None Remove="DataFiles\**" />
+    <None Remove="Resx\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="SharedAssets\Rules\abilities.json" />
+    <None Remove="SharedAssets\Rules\factions\AdeptaSororitas\abilities.json" />
+    <None Remove="SharedAssets\Rules\factions\AdeptaSororitas\faction.json" />
+    <None Remove="SharedAssets\Rules\factions\AdeptaSororitas\models.json" />
+    <None Remove="SharedAssets\Rules\factions\AdeptaSororitas\tactics.json" />
     <None Remove="SharedAssets\Rules\factions\AdeptusAstartes\abilities.json" />
     <None Remove="SharedAssets\Rules\factions\AdeptusAstartes\faction.json" />
     <None Remove="SharedAssets\Rules\factions\AdeptusAstartes\models.json" />
@@ -148,6 +155,10 @@
     <EmbeddedResource Include="SharedAssets\LegacyDatabaseUpdate\018.sql" />
     <EmbeddedResource Include="SharedAssets\Arial.ttf" />
     <EmbeddedResource Include="SharedAssets\Rules\abilities.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptaSororitas\abilities.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptaSororitas\faction.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptaSororitas\models.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptaSororitas\tactics.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptusAstartes\abilities.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptusAstartes\faction.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\AdeptusAstartes\models.json" />
@@ -275,6 +286,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.3.0.21" />
     <PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer" Version="16.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="16.3.0.29" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
     <PackageReference Include="Xamarin.Plugins.Clipboard" Version="2.2.1" />  
   </ItemGroup>
@@ -283,20 +295,31 @@
     <Compile Update="KTApp.xaml.cs">
       <DependentUpon>KTApp.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\LightTheme.xaml.cs">
+      <DependentUpon>LightTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\FactionsView.xaml.cs">
+      <DependentUpon>FactionsView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PsychiqueView.xaml.cs">
       <DependentUpon>PsychiqueView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\InGamePage.xaml.cs">
       <DependentUpon>InGamePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\EquipePage.xaml.cs">
-      <DependentUpon>EquipePage.xaml</DependentUpon>
+    <Compile Update="Views\TeamView.xaml.cs">
+      <DependentUpon>TeamView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ListTactiquePage.xaml.cs">
       <DependentUpon>ListTactiquePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ListEquipesPage.xaml.cs">
-      <DependentUpon>ListEquipesPage.xaml</DependentUpon>
+    <Compile Update="Views\TeamsView.xaml.cs">
+      <DependentUpon>TeamsView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ListDeclinaisonPage.xaml.cs">
       <DependentUpon>ListDeclinaisonPage.xaml</DependentUpon>
@@ -307,21 +330,15 @@
     <Compile Update="Views\ListPsychiquePage.xaml.cs">
       <DependentUpon>ListPsychiquePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resx\Translate.de.Designer.cs">
-      <DependentUpon>Translate.de.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resx\Translate.de.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Translate.de.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resx\Translate.en.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resx\Translate.fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+    <EmbeddedResource Update="Themes\DarkTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\AptitudeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -341,7 +358,7 @@
     <EmbeddedResource Update="Views\ConfigurationCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\FactionsPage.xaml">
+    <EmbeddedResource Update="Views\FactionsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\KickStarter.xaml">
@@ -356,7 +373,7 @@
     <EmbeddedResource Update="Views\ListConfigsArmes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ListEquipesPage.xaml">
+    <EmbeddedResource Update="Views\TeamsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ListDeclinaisonPage.xaml">

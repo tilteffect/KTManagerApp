@@ -15,7 +15,10 @@ namespace KillTeam.ViewModels
 
         public DatabaseLoadViewModel()
         {
-            // TODO
+        }
+
+        public void StartUpdate()
+        {
             ThreadPool.QueueUserWorkItem(_o => this.UpdateDB());
         }
 
@@ -24,7 +27,7 @@ namespace KillTeam.ViewModels
             KTContext.UpdateEvent += OnUpdate;
             var _ = KTContext.Db; // trigger lazy load
             Device.BeginInvokeOnMainThread(() => {
-                KTApp.Current.MainPage = new NavigationPage(new ListEquipesPage());
+                KTApp.Current.MainPage = new NavigationPage(new TeamsView());
             });
         }
 

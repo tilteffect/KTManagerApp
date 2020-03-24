@@ -80,6 +80,7 @@
     <Compile Include="Contracts\IIdentifiable.cs" />
     <Compile Include="Contracts\INamed.cs" />
     <Compile Include="Contracts\ITactic.cs" />
+    <Compile Include="Environment_iOS.cs" />
     <Compile Include="Localize.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -293,6 +294,9 @@
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown.IOS">
       <Version>16.3.0.29</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.5.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
   </ItemGroup>

@@ -49,6 +49,11 @@
     <None Remove="SharedAssets\Rules\factions\Asuryani\models.json" />
     <None Remove="SharedAssets\Rules\factions\Asuryani\psychics.json" />
     <None Remove="SharedAssets\Rules\factions\Asuryani\tactics.json" />
+    <None Remove="SharedAssets\Rules\factions\ChaosDaemons\abilities.json" />
+    <None Remove="SharedAssets\Rules\factions\ChaosDaemons\faction.json" />
+    <None Remove="SharedAssets\Rules\factions\ChaosDaemons\models.json" />
+    <None Remove="SharedAssets\Rules\factions\ChaosDaemons\psychics.json" />
+    <None Remove="SharedAssets\Rules\factions\ChaosDaemons\tactics.json" />
     <None Remove="SharedAssets\Rules\factions\DeathGuard\abilities.json" />
     <None Remove="SharedAssets\Rules\factions\DeathGuard\faction.json" />
     <None Remove="SharedAssets\Rules\factions\DeathGuard\models.json" />
@@ -182,6 +187,11 @@
     <EmbeddedResource Include="SharedAssets\Rules\factions\Asuryani\models.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\Asuryani\psychics.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\Asuryani\tactics.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\ChaosDaemons\abilities.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\ChaosDaemons\faction.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\ChaosDaemons\models.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\ChaosDaemons\psychics.json" />
+    <EmbeddedResource Include="SharedAssets\Rules\factions\ChaosDaemons\tactics.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\DeathGuard\abilities.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\DeathGuard\faction.json" />
     <EmbeddedResource Include="SharedAssets\Rules\factions\DeathGuard\models.json" />
@@ -321,8 +331,8 @@
     <Compile Update="Views\TeamsView.xaml.cs">
       <DependentUpon>TeamsView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ListDeclinaisonPage.xaml.cs">
-      <DependentUpon>ListDeclinaisonPage.xaml</DependentUpon>
+    <Compile Update="Views\ModelsView.xaml.cs">
+      <DependentUpon>ModelsView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\AptitudeCell.xaml.cs">
       <DependentUpon>AptitudeCell.xaml</DependentUpon>
@@ -376,7 +386,7 @@
     <EmbeddedResource Update="Views\TeamsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ListDeclinaisonPage.xaml">
+    <EmbeddedResource Update="Views\ModelsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ListErreurPage.xaml">
@@ -395,6 +405,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\RemerciementPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VersionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
